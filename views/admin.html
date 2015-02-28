@@ -1,0 +1,27 @@
+
+  <div class="container">
+    <div class=row>
+      <div class="col-md-4">
+      <h1>{{fish.name}}</h1>
+      <img ng-src="{{images[0]}}">
+      <h2>{{fish.description}}</h2>
+      <h3>{{fish.price | currency}}</h3>
+
+
+      <form ng-submit="mainCtrl.addFish(newFish)">
+        <input type="text" ng-model="newFish.name" placeholder="Name">
+        <input type="image" ng-model="newFish.image" placeholder="image">
+        <input type="text" ng-model="newFish.description" placeholder="Description">
+        <input type="text" ng-model="newFish.price" placeholder="Price">
+
+        <button type="edit">Edit Fish</button>
+        <button type="delete">Delete Fish</button>
+        <button type="submit">Add Fish</button>
+      </form>
+    </div>
+    </div>
+  </div>  
+
+<!--
+  <button ng-click="mainCtrl.alertMe()">Alert Me!!!</button>
+-->
