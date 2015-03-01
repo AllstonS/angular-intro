@@ -1,17 +1,13 @@
 
 
 <div class="container">
-
-  <div>
-    <header>Finn's Fancy Fish</header>
-  </div>
-
     <div class="row">
       <div class="col-md-4" ng-repeat="fish in mainCtrl.fish">
-      <h1>{{fish.name}}</h1>
-      <img ng-src="fish.image[0]">
-      <h2>{{fish.description}}</h2>
-      <p>{{fish.price}}</p>
+      <h3>{{fish.name}}</h3>
+      <img data-ng-src={{fish.image}} />
+      <p>{{fish.description}}</p>
+      <h3>Price: ${{fish.price}}</h3>
+      <hr>
       </div>
     </div>
   </div>

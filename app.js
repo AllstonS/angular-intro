@@ -1,23 +1,29 @@
 (function () {
   "use strict";
 
-  angular.module('fishApp', [
+  angular.module('storeApp', [
   'ngRoute'
   ])
+  //configure routes
   .config(function ($routeProvider) {
     $routeProvider
+
+//route for the products (user) page
     .when('/', {
-      templateUrl: 'views/main.html',
+      templateUrl: 'views/products.html',
       controller: 'MainController as mainCtrl'
     })
+    //route for the administrative page
     .when('/admin', {
       template: 'views/admin.html',
-      controller: 'MainController as mainCtrl'
+      controller: 'mainController as mainCtrl'
     })
-    .when('/product', {
-      templateUrl: 'views/products.html'
-    })
-    .when('/not found', {
+    // .when('/product', {
+    //   templateUrl: 'views/products.html',
+    //   controller: 'MainController as mainCtrl'
+    //
+    // })
+    .when('/not-found', {
       templateURL: 'views/notfound.html'
     })
     .otherwise({
