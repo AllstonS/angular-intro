@@ -1,40 +1,56 @@
 
-body {
-  width:100%;
-//*  background:url("https://s3.amazonaws.com/files.creativemarket.com/images/screenshots/products/25/258/258170/fish-scales-pattern-blue-f.jpg?1417500113");
+  body {
+    width:100%;
+/*     background:url("https://s3.amazonaws.com/files.creativemarket.com/images/screenshots/products/25/258/258170/fish-scales-pattern-blue-f.jpg?1417500113");
+ */
+  }
+  .fa {
+    margin-right: 8%;
 
-}
+  }
 
-header{
+  .products{
+    margin:0 auto;
+    margin-top: 2%;
+    width:100%;
+  //  background:url("https://s3.amazonaws.com/files.creativemarket.com/images/screenshots/products/25/258/258170/fish-scales-pattern-blue-f.jpg?1417500113");
+  //  color: "white";
+  }
 
-  margin:0 auto;
-  margin-top: 20px;
-  width:50%;
-  color: "white";
-  text-align: center;
-  font-size: 50px;
-  font-family: 'Bershire Swash', Cursive;
-  border: 1px solid white;
-  background: white;
-  border-radius:15px 15px 15px 15px;
-}
+  .title{
+    margin-bottom: 15px;
+    text-align: center;
+    font-size: 50px;
+    font-family: 'Bershire Swash', Cursive;
+  }
 
-  hr{
-    color: black;
-    background-color: black;
-    border-bottom:2px solid black;
+    hr{
+      color: black;
+      background-color: black;
+      border-bottom:2px solid black;
+      margin-top:0px;
+      margin-bottom:0px;
 
-}
+  }
 
 .container {
-  margin: 0 auto;
+  width:100%;
+
+ ///    background:url("https://s3.amazonaws.com/files.creativemarket.com/images/screenshots/products/25/258/258170/fish-scales-pattern-blue-f.jpg?1417500113");
 }
 
-  h1{
-    font-size: 15px;
+
+  .fish {
+    margin:20px 10px 8px 22px;
+    border: 1px solid black;
+    background-color: white;
+    width: 31%;
   }
-  p {
-    font-family: Helvetica;
-    font-size:13px;
+    h1{
+      font-size: 15px;
+    }
+    p {
+      font-family: Helvetica;
+      font-size:13px;
 
-}
+  }

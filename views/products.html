@@ -1,13 +1,28 @@
 
 
+  <!--Row top of  products page-->
+  <div class="row products">
+
+    <div class="col-md-10 title">Finn's Fancy Fish</div>
+    <div class="col-md-2">
+    </div>
+  <div class="header-right">
+  <a href="#/cart" class="cart invert">
+    <i class="fa fa-shopping-cart fa-3x pull-right"></i>
+  </a>
+  <a href="#/admin" class="admin invert">admin.</a>
+</div>
+</div>
+
+
 <div class="container">
-    <div class="row">
-      <div class="col-md-4" ng-repeat="fish in mainCtrl.fish">
+    <div class="row product">
+      <div class="col-md-4 fish" ng-repeat="fish in mainCtrl.fishes">
       <h3>{{fish.name}}</h3>
       <img data-ng-src={{fish.image}} />
       <p>{{fish.description}}</p>
-      <h3>Price: ${{fish.price}}</h3>
-      <hr>
+      <h3>Price: {{ fish.price | currency }}</h3>
+
       </div>
     </div>
   </div>
