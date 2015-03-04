@@ -4,7 +4,6 @@
   angular.module('fishApp')
 
   .controller('MainController', function (FishStoreService, $scope, $routeParams, $location) {
-
     var mainCtrl = this;    //the scope of our controller is 'this'
 
     mainCtrl.fishes = FishStoreService.getFishes(); //getting data from product array
@@ -30,7 +29,7 @@
       FishStoreService.editFish(Fish);
       $location.path('/admin');
   };
-
+//Shopping cart:
 
    mainCtrl.addCartFish = function (newCartFish) {
      FishStoreService.addCartFish(newCartFish);

@@ -10,14 +10,10 @@
 
   //  route for the products (user) page
      .when('/', {
-       templateUrl: 'views/products.html',
+       templateUrl: 'views/main.html',
        controller: 'MainController as mainCtrl'
     })
 
-    // .when('/views', {
-    //   templateUrl: 'views/products.html',
-    //   controller: 'MainController as mainCtrl'
-    // })
     //route for the administrative page
     .when('/admin', {
       templateUrl: 'views/admin/admin.html',

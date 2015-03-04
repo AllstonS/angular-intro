@@ -1,51 +1,50 @@
-<div class="header">
+<!--   <div class="row">
   <div class="header-left">
     <a href="#/">products</a>
   </div>
 
   <div class="header-right">
-    <a href="#/cart" class="cart invert">
-      <i class="fa fa-shopping-cart fa-3x pull-right"></i>
+<a href="#/cart" class="cart invert">        <i class="fa fa-shopping-cart fa-3x pull-right"></i>
     </a>
     <a href="#/admin" class="admin invert">admin.</a>
   </div>
 </div>
 
 
-<!--   <div class="row products">
-  <div class="col-md-10 title">Finn's Fancy Fish</div>
-  <div class="col-md-2">
-  </div>
+<div class="row products">
+<div class="col-md-10 title">Finn's Fancy Fish</div>
+<div class="col-md-2">
+</div>
 
 </div>
 <hr>
 
 <div class="container">
-  <div class="row-product">
-    <div class="col-md-3 fish" ng-repeat="fish in mainCtrl.cartfishes">
-    <h3>{{fish.name}}</h3>
-    <img data-ng-src={{fish.image}} />
-    <p>{{fish.description}}</p>
-    <h3>Price: {{ fish.price | currency }}</h3>
-    </div>
-    <div class="inner1" id="xxx">
-      <button class="remove" ng-click="mainCtrl.removeCartFish(fish)">x</button>
+<div class="row-product">
+  <div class="col-md-3 fish" ng-repeat="fish in mainCtrl.cartfishes">
+  <h3>{{fish.name}}</h3>
+  <img data-ng-src={{fish.image}} />
+  <p>{{fish.description}}</p>
+  <h3>Price: {{ fish.price | currency }}</h3>
   </div>
-  <div class="pricing">
-    <div class="total">total price = </div>
-    <div class="dollar">$</div>
-    <div class="total-num"> {{mainCtrl.getTotalPriceOfCartFishes}}</div>
+  <div class="inner1" id="xxx">
+    <button class="remove" ng-click="mainCtrl.removeCartFish(fish)">x</button>
+</div>
+<div class="pricing">
+  <div class="total">total price = </div>
+  <div class="dollar">$</div>
+  <div class="total-num"> {{mainCtrl.getTotalPriceOfCartFishes}}</div>
 </div>
 
 products.html
 <div class="row products">
 
-  <div class="col-md-10 title">Finn's Fancy Fish</div>
-  <div class="col-md-2">
-  </div>
+<div class="col-md-10 title">Finn's Fancy Fish</div>
+<div class="col-md-2">
+</div>
 <div class="header-right">
 <a href="#/cart" class="cart invert">
-  <i class="fa fa-shopping-cart fa-3x pull-right"></i>
+<i class="fa fa-shopping-cart fa-3x pull-right"></i>
 </a>
 <a href="#/admin" class="admin invert">admin.</a>
 </div>
@@ -53,14 +52,14 @@ products.html
 
 
 <div class="container">
-  <div class="row product">
-    <div class="col-md-4 fish" ng-repeat="fish in mainCtrl.fishes">
-    <h3>{{fish.name}}</h3>
-    <img data-ng-src={{fish.image}} />
-    <p>{{fish.description}}</p>
-    <h3>Price: {{ fish.price | currency }}</h3>
+<div class="row product">
+  <div class="col-md-4 fish" ng-repeat="fish in mainCtrl.fishes">
+  <h3>{{fish.name}}</h3>
+  <img data-ng-src={{fish.image}} />
+  <p>{{fish.description}}</p>
+  <h3>Price: {{ fish.price | currency }}</h3>
 
-    </div>
   </div>
+</div>
 </div>
  -->
