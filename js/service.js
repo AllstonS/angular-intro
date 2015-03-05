@@ -2,7 +2,10 @@
     "use strict";
 
   angular.module('fishApp')
-  .factory('FishStoreService', function () {
+  .factory('FishStoreService', function ($http, $rootScope) {
+
+    var url= 'http://tiy-fee-rest.herokuapp.com/collections/fishy';
+
     var fishes = [
     {
       name: "Angel",
@@ -45,39 +48,119 @@
     var cartFishes = [
 
     ];
-//    var getFish = function()
+
+
+
+    //admin
+
+    var getFishes = function() {
+      return $http.get(url);            //returns products
+    };
+
+    var getSingleFish = function (id) {  //was index
+        return $http.get(url + '/' + id);
+    };
+
+    var addFish = function (fish) {
+      item.reviews = [];
+      $http.post(url, fish);
+      $rootScope.$broadcast('fish:created')
+      //fishes.push(fish);
+    };
+
+    var deleteFish = function (id)    //was (fish)
+      $http.deleteL(url) + '/' + id);
+      $rootScope.$broadcast('fish:deleted');
+    };
+
+    var editFish = function (fish, id) {    //was (item, index)
+    $http.put(url + '/' + id, fish);
+    $rootScope.$broadcast('fish:updated');
+  };
+
+
+  //User
+    //reviews
+
+    var addReview = function (fish, review) {
+      review = {
+        body: '',
+        author: ''
+      }
+      fish.reviews.push(review);
+      $http.put(url + '/' + item._id, item)
+    }
+;//    var getFish = function()
 //      return fish;
 //    }
 
-    var getFishes = function () {
-      return fishes;
-    }
+    // var getFishes = function () {
+    //   return fishes;
+    // }
+    //
+    // var addFish = function (fish) {
+    //   fishes.push(fish);
+    // };
+    //
+    // var deleteFish = function(fish) {
+    //   var idx = fishes.indexOf(fish);
+    //     console.log(idx);
+    //     fishes.splice (idx, 1);
+    // }
+    //
+    // var editFish = function(fish, idx) {
+    //
+    //   var idx = fishes.indexOf(fish);
+    //   fishes[idx] = fish;
+    //
+    // }
+    //
+    // var buyFish = function(fish) {
+    //   cartFishes.push(fish);
+    //   console.log (cartFishes);
+    // };
+    //cart
 
-    var addFish = function (fish) {
-      fishes.push(fish);
-    }
-
-    var deleteFish = function(fish) {
-      var idx = fishes.indexOf(fish);
-        console.log(idx);
-        fishes.splice (idx, 1);
-    }
-
-    var editFish = function(fish, idx) {
-
-      var idx = fishes.indexOf(fish);
-      fishes[idx] = fish;
-
+    var cart = [];
+    var addToCart = function (item) {
+      cart.push(item);
     };
 
+    var getCartFishes = function () {
+      return cart;
+    };
+
+    //var getSingleCartFish = function (id) {
+    //retrun cart [id];
+    //};
+
+    var deleteCartFishes = function (fish) {
+      var idx = cart.indexOf(fish);
+      cart.splice(idx,1);
+    };
+
+    var total = function () {
+      var total = 0;
+      angular.forEach(cart, function(fish) {
+        total += fish.quant * fish.price;
+      })
+      return total;
+    };
+  }
     return {
       getFishes: getFishes,
+      getFish: getSingleFish,
       addFish: addFish,
       deleteFish: deleteFish,
-      editFish: editFish
+      editFish: editFish,
+//      buyFish: buyFish
+
+      addToCart: addToCart,
+      getCartFishes: getCartFishes,
+      //getCartFish: getSingleCartFish,
+      deleteFromCart: deleteCartFishes,
+      total: total
     };
-
-
 
   });
 

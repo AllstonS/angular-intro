@@ -42,35 +42,7 @@
    };
 
 
-    //Shopping Cart
-
-  //  mainCtrl.cartFishes = FishStoreService.getCartFishes();
-  //  mainCtrl.cartFish = FishStoreService.getCartFish($routeParams.fishIndex);
-
-    mainCtrl.addToCart = function (fish) {
-      FishStoreService.addToCart(fish);
-      $location.path('/cart');
-    };
-
-    mainCtrl.deleteFromCart = function (fish) {
-      FishStoreService.deleteFromCart(fish);
-  };
-
-//     mainCtrl.total = function () {
-//       var total = 0;
-// //      angular.forEach(mainCtrl)
-//     }
-//  };
-
-
 
   });
 
 }) ();
-
-  // .controller('CartController', function(FishStoreService, $scope) {
-  //
-  //   var cartController = this //the scope of our car controller is 'this'
-  //
-  //   cartCtrl.fishes = FishStoreService.getFishes();
-  // })
